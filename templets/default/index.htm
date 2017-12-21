@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by xunmoban.com" />
+<LINK href="/skin/css/master.css" rel=stylesheet>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery-1.6.4.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/search.js"></script>
+<!--[if IE 6.0]>
+<script type="text/javascript" src="/skin/js/iepngfix_tilebg.js"></script>
+<![endif]-->
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<div class="con1"> {dede:type typeid='2'}
+  <div class="con1title"> <span>[field:typename/]</span> <a href="[field:typelink/]" title="更多" class="more1">+ 更多</a> </div>
+  {/dede:type}
+  <ul class="con1_con">
+    {dede:arclist typeid='2' row='4' titlelen='50' orderby='pubdate'}
+    <li> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]" /></a> <a href="[field:arcurl/]" title="[field:title/]" class="con1_title1">[field:title/]</a> <span> [field:description function="cn_substr(@me,200)"/]... <a href="[field:arcurl/]" title="查看详细" class="lookmore">查看详细</a> </span> </li>
+    {/dede:arclist}
+  </ul>
+</div>
+{dede:type typeid='9'}
+<div class="con2title"> <span>[field:typename/]</span> <a href="[field:typelink/]" title="更多" class="more2">+ 更多</a> </div>
+{/dede:type}
+<div class="con2bg">
+  <ul class="con2_ul">
+    {dede:arclist typeid='9' row='4' titlelen='50' orderby='pubdate'}
+    <li> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]" /></a> <a href="[field:arcurl/]" title="[field:title/]" class="con2_title">[field:title/]</a>
+      <p class="shadow"></p>
+    </li>
+    {/dede:arclist}
+  </ul>
+</div>
+<div class="con3">
+  <div class="con3left"> {dede:type typeid='13'}
+    <div class="con3lefttitle"> <span>[field:typename/]</span> <a href="[field:typelink/]" title="更多" class="more3">+ 更多</a> </div>
+    {/dede:type}
+    <ul class="news_ul">
+      {dede:arclist typeid='13' row='5' titlelen='50' orderby='pubdate'}
+      <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
+      {/dede:arclist}
+    </ul>
+  </div>
+  <div class="con3right"> {dede:type typeid='1'}
+    <div class="con1title"> <span>[field:typename/]</span> <a href="[field:typelink/]" title="更多" class="more1">+ 更多</a> </div>
+    {/dede:type}
+    <div class="con3right_con">　　{dede:sql sql='Select content from dede_arctype where id=1'} 
+      
+      [field:content  function='cn_substr(html2text(@me),600)'/]....
+      
+      {/dede:sql}</div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

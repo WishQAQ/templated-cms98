@@ -1,0 +1,19 @@
+<div class="left"> {dede:type typeid='13'}
+  <div class="lefttitle">[field:typename/]</div>
+  {/dede:type}
+  <ul class="leftnews">
+    {dede:arclist typeid='13' row='5' titlelen='32' orderby='pubdate'}
+    <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+    {/dede:arclist}
+  </ul>
+  {dede:type typeid='12'}
+  <div class="lefttitle">[field:typename/]</div>
+  {/dede:type}
+  <div class="leftcontact">
+    <p>地址：{dede:global.cfg_add/}</p>
+    <p>电话：{dede:global.cfg_tel/}</p>
+    <p>传真：{dede:global.cfg_fax/}</p>
+    <p>手机：{dede:global.cfg_phone/}</p>
+    <p>邮箱：{dede:global.cfg_email/}</p>
+  </div>
+</div>

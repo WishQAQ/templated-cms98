@@ -1,0 +1,1 @@
+<div class="con2title"> <span>[field:typename/]</span> <a href="[field:typelink/]" title="更多" class="more2">+ 更多</a> </div>

@@ -1,0 +1,1 @@
+<li> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]" /></a> <a href="[field:arcurl/]" title="[field:title/]" class="con1_title1">[field:title/]</a> <span> [field:description function="cn_substr(@me,200)"/]... <a href="[field:arcurl/]" title="查看详细" class="lookmore">查看详细</a> </span> </li>

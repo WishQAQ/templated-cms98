@@ -1,0 +1,35 @@
+<div class="topbg">
+  <div class="top"> <a href="/" title="{dede:global.cfg_webname/}"><img src="/skin/images/logo.jpg" alt="{dede:global.cfg_webname/}" class="logo" /></a>
+    <div class="topright">
+      <p class="icons">报名电话</p>
+      <p>{dede:global.cfg_tel/}</p>
+    </div>
+  </div>
+</div>
+<div class="navbg">
+  <ul>
+    <li><a href="/" title="网站首页">网站首页</a></li>
+    {dede:channel type='top' currentstyle="
+    <li><a href='~typelink~' class='thisclass'>~typename~</a></li>
+    "}
+    <li><a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a></li>
+    {/dede:channel}
+  </ul>
+</div>
+<div class="bannerbg">
+  <center>
+    <img src="/skin/images/banner.jpg" alt="banner" class="banner" />
+  </center>
+</div>
+<div class="marquee_box"> <span>最新公告：</span>
+  <marquee>
+  {dede:global.cfg_gg/}
+  </marquee>
+  <div class="search">
+    <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+      <input type="hidden" name="kwtype" value="0" />
+      <input type="text" class="text" name="q" id="q" value="请输入搜索关键词"/>
+      <input type="submit" value="" title="搜索" class="button" />
+    </form>
+  </div>
+</div>
